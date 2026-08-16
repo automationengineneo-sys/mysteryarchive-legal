@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MysteryArchive — Real Unsolved Cases, Documented</title>
+<style>
+  :root{
+    --ink: #eae3d3;
+    --ink-dim: #a89f8c;
+    --ground: #15130f;
+    --ground-2: #1c1a15;
+    --line: #38342b;
+    --stamp: #a3402f;
+    --stamp-dim: #6b2c21;
+    --paper: #eae3d3;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Georgia', 'Times New Roman', serif;
+    line-height: 1.5;
+  }
+  ::selection{ background: var(--stamp); color: var(--ground); }
+
+  .grain{
+    position: fixed; inset: 0; pointer-events: none; z-index: 5;
+    opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header{
+    max-width: 880px; margin: 0 auto; padding: 64px 28px 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow{
+    font-family: 'Courier New', monospace;
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stamp); margin: 0 0 18px;
+  }
+  .eyebrow::before{ content: "— "; color: var(--ink-dim); }
+  h1{
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 0.98;
+    margin: 0 0 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  h1 em{ font-style: italic; color: var(--stamp); }
+  .lede{
+    font-size: 19px; color: var(--ink-dim); max-width: 56ch; margin: 0;
+  }
+
+  .catalog{
+    max-width: 880px; margin: 0 auto; padding: 48px 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .catalog-row{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .catalog-row:first-of-type{ border-top: none; }
+  .catalog-num{
+    font-family: 'Courier New', monospace;
+    font-size: 13px; color: var(--stamp-dim); padding-top: 3px;
+  }
+  .catalog-body h2{
+    font-size: 20px; font-weight: 600; margin: 0 0 6px; letter-spacing: 0.01em;
+  }
+  .catalog-body p{
+    margin: 0; color: var(--ink-dim); font-size: 16px; max-width: 58ch;
+  }
+
+  .channels{
+    max-width: 880px; margin: 0 auto; padding: 56px 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .channels h2{
+    font-family: 'Courier New', monospace;
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-dim); margin: 0 0 24px; font-weight: 400;
+  }
+  .channel-links{
+    display: flex; flex-wrap: wrap; gap: 14px;
+  }
+  .channel-links a{
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--ink); text-decoration: none;
+    border: 1px solid var(--line);
+    padding: 12px 20px;
+    font-size: 15px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    font-family: 'Courier New', monospace;
+  }
+  .channel-links a:hover, .channel-links a:focus-visible{
+    border-color: var(--stamp); color: var(--stamp);
+    outline: none;
+  }
+  .channel-links a::after{ content: "→"; margin-left: 4px; }
+
+  footer{
+    max-width: 880px; margin: 0 auto; padding: 40px 28px 64px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;
+    font-family: 'Courier New', monospace; font-size: 13px; color: var(--ink-dim);
+  }
+  footer a{ color: var(--ink-dim); text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover{ color: var(--stamp); }
+  .footer-links{ display: flex; gap: 24px; }
+
+  @media (max-width: 600px){
+    .catalog-row{ grid-template-columns: 1fr; gap: 6px; }
+    footer{ flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <p class="eyebrow">Case File / Automation Services</p>
+  <h1>Mystery<em>Archive</em></h1>
+  <p class="lede">A documentary media project publishing one real unsolved case a day — vanished ships, undeciphered artifacts, disappearances with no trace — across every era, from antiquity to the present.</p>
+</header>
+
+<section class="catalog">
+  <div class="catalog-row">
+    <span class="catalog-num">01</span>
+    <div class="catalog-body">
+      <h2>What this is</h2>
+      <p>MysteryArchive is a single, self-owned channel producing short-form video on real, documented unsolved cases. No fiction, no filler — every case is sourced and dated.</p>
+    </div>
+  </div>
+  <div class="catalog-row">
+    <span class="catalog-num">02</span>
+    <div class="catalog-body">
+      <h2>How it publishes</h2>
+      <p>New episodes go out daily across TikTok, Instagram, and YouTube through an automated production and posting pipeline operated by a single owner for this one account.</p>
+    </div>
+  </div>
+  <div class="catalog-row">
+    <span class="catalog-num">03</span>
+    <div class="catalog-body">
+      <h2>Who's behind it</h2>
+      <p>An independent, self-owned project. No third-party client access, no multi-user posting — content and account credentials stay in-house.</p>
+    </div>
+  </div>
+</section>
+
+<section class="channels">
+  <h2>Find the archive</h2>
+  <div class="channel-links">
+    <a href="https://www.tiktok.com/@mystery.originals" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.instagram.com/mystery.originals" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.youtube.com/@mystery.originals" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 MysteryArchive. All cases independently researched.</span>
+  <span class="footer-links">
+    <a href="./Terms.html">Terms of Service</a>
+    <a href="./Privacy.html">Privacy Policy</a>
+  </span>
+</footer>
+
+</body>
+</html>
